@@ -1,0 +1,112 @@
+.orders-section-sub-list {
+  display: none;
+  max-width: 800px;
+
+}
+
+.orders-section-sub-list.active {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.orders-section-sub-list-item {
+
+        gap: 2em;
+width: 100%;
+  @include flex(row);
+  position: relative;
+  background-color: $secondaryLight;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  padding: 20px 10px;
+@include flex(row, flex-start, center);
+ @media (min-width: 443px) {
+@include flex(row, space-between, center);
+
+    }
+      @include breakpoint-mf("sm") {
+            
+            padding: 20px 20px;
+          }
+}
+
+.orders-section-sub-list-item-img-wrap {
+
+width: 115px;
+    height: 120px;
+
+  @include breakpoint-mf("md") {
+        width: 150px;
+  }
+}
+
+.orders-section-sub-list-item-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.orders-section-sub-list-item-details {
+  @include flex(column, flex-start);
+      gap: 20px;
+      color: black;
+@include fonts(400, 14px, 18px);
+ @media (min-width: 443px) {
+@include flex(row, space-around, center);
+    width: 67%;
+    // @include fonts(500, 18px, 20px);
+    }
+  @include breakpoint-mf("sm") {
+   @include flex(row, space-around, center);
+    @include fonts(400, 16px, 20px);
+  }
+
+}
+.orders-section-sub-list-item-details-price-value {
+  @include fonts(400, 16px, 20px);
+  color: black;
+}
+.orders-section-sub-list-total-wrap {
+    @include flex(column, flex-start);
+    gap: 10px;
+    padding-top: 30px;
+    @include breakpoint-mf("md") {
+        padding: 30px 40px;
+    }
+}
+
+.orders-section-sub-list-total-wrap-p {
+    @include flex(column, flex-start);
+    width: 100%;
+    @include fonts(400, 16px, 35px);
+        @include breakpoint-mf("ma") {
+        @include flex(row, space-between);
+    }
+}
+
+.orders-section-sub-list-total-wrap-p span:nth-child(1) {
+    @include fonts(500, 16px, 35px);
+}
+
+.orders-section-sub-list-total-wrap-p span:nth-child(2) {
+    color: #666;
+}
+
+.total {
+      @include flex(row, space-between);
+        @include fonts(700, 20px, 35px);
+    border-bottom: 0.015rem solid #979797;
+    padding-bottom: 12px;
+}
+
+.orders-section-sub-list-total-wrap-p:nth-child(3) span:nth-child(2) {
+      text-align: left;
+}
+
+.orders-section-sub-list-total-wrap-p:nth-child(1) span:nth-child(2) {
+      color: black;
+}
+
+
+

@@ -1,0 +1,250 @@
+.favorites {
+  &__header {
+    display: none;
+    margin: 40px 40px 0px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: $primary;
+    & > p:nth-child(5) {
+      visibility: hidden;
+    }
+    @include breakpoint-mf("md") {
+      @include flex(row, space-between);
+      & > p:nth-child(2) {
+        padding-left: 175px;
+      }
+    }
+    @include breakpoint-mf("my") {
+      & > p:nth-child(5) {
+        visibility: visible;
+      }
+    }
+    @include breakpoint-bet(320px, 767px) {
+    }
+  }
+  // block with items
+  &__item-block {
+    @include flex(column, center, center);
+    margin-top: 40px;
+    @include breakpoint-mf("md") {
+      align-items: flex-end;
+    }
+  }
+  // items card
+  &__item {
+    @include flex(row);
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: $secondaryLight;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    margin-bottom: 20px;
+    @include breakpoint-mf("sm") {
+      align-items: center;
+      padding: 30px 40px;
+    }
+    &-img {
+      width: 100px;
+      height: 100px;
+      @include breakpoint-mf("md") {
+        width: 130px;
+        height: 130px;
+      }
+    }
+    &-details {
+      font-size: 12px;
+      @include flex(column, flex-start);
+      gap: 5px;
+      padding-left: 10px;
+      @include breakpoint-mf("sm") {
+        width: 100%;
+        @include flex(row, space-between, flex-start);
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    &-title {
+      display: flex;
+      text-align: start;
+      margin-top: 8px;
+      margin-left: 10px;
+      @include breakpoint-bet(767px, 1023px) {
+        width: 110px;
+      }
+      @include breakpoint-bet(280px, 767px) {
+        margin-top: 5px;
+        display: flex;
+        text-align: start;
+      }
+    }
+    &-price {
+      margin-left: -20px;
+      margin-top: 8px;
+      @include breakpoint-bet(768px, 1023px) {
+        margin-top: 20px;
+      }
+      @include breakpoint-bet(640px, 767px) {
+        margin-top: 15px;
+      }
+      @include breakpoint-bet(280px, 639px) {
+        margin: 5px 0px 10px 5px;
+        display: flex;
+        text-align: start;
+      }
+    }
+    &-add {
+      @include breakpoint-bet(768px, 1023px) {
+        margin-top: 15px;
+      }
+      @include breakpoint-bet(640px, 767px) {
+        margin-top: 10px;
+      }
+      &-cart {
+        cursor: pointer;
+        border: 1px solid $white;
+        border-radius: 50%;
+        background-color: $white;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        &:hover {
+          color: #fff;
+          border-color: $primary;
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.2509803922);
+        }
+      }
+      &-cart-icon {
+        width: 24px;
+        height: 24px;
+        padding: 3px 1px 1px 1px;
+      }
+    }
+    &-remove {
+      @include breakpoint-bet(768px, 1023px) {
+        margin-top: 15px;
+      }
+      @include breakpoint-bet(640px, 767px) {
+        margin-top: 10px;
+        right: 10px;
+      }
+      @include breakpoint-bet(315px, 639px) {
+        right: 10px;
+        transform: translate(0, -50%);
+        position: absolute;
+        right: 10px;
+        top: 74%;
+      }
+      @include breakpoint-bet(280px, 314px) {
+        right: 10px;
+        transform: translate(0, -50%);
+        position: absolute;
+        right: 10px;
+        top: 78%;
+      }
+      &-btn {
+        cursor: pointer;
+        border: 1px solid $white;
+        border-radius: 50%;
+        background-color: $white;
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        &:hover {
+          color: #fff;
+          border-color: $primary;
+          box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.2509803922);
+        }
+      }
+      &-icon {
+        width: 24px;
+        height: 24px;
+        padding: 3px 1px 1px 1px;
+      }
+    }
+  }
+  &__button {
+    margin: 20px 0px 30px 0px;
+    &-close {
+      @include flex(row, center, center);
+      margin: 30px 0px;
+      font-size: 12px;
+      font-weight: 400;
+      border: 1px solid $primary;
+      width: 100px;
+      height: 25px;
+      color: $primary;
+      @include breakpoint-mf("sm") {
+        font-size: 20px;
+        width: 125px;
+        height: 35px;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $primary;
+        box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.2509803922);
+      }
+    }
+  }
+}
+
+.fav-empty {
+  padding-top: 15px;
+  @include flex(column, center, center);
+  &__text {
+    margin-top: 10px;
+    @include breakpoint-mf("sm") {
+      font-size: 16px;
+    }
+    @include breakpoint-mf("md") {
+      font-size: 18px;
+    }
+  }
+  &__btn {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+      Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    margin: 20px 0px 50px 0px;
+
+    &:hover,
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:active {
+      background-color: #f0f0f1;
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+      color: rgba(0, 0, 0, 0.65);
+      transform: translateY(0);
+    }
+  }
+}

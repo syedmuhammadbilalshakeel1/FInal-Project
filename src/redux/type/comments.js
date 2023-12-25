@@ -1,0 +1,8 @@
+const commentsTypes = {
+  FILL_COMMENTS: "FILL_COMMENTS",
+  ADD_COMMENT: "ADD_COMMENT",
+  UPDATE_COMMENT: "UPDATE_COMMENT",
+  REMOVE_COMMENT: "REMOVE_COMMENT",
+};
+
+export default commentsTypes;

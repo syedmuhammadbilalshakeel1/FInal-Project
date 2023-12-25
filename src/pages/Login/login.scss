@@ -1,0 +1,152 @@
+.login-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  @include flex(column, center, center);
+  @include breakpoint-mf("md") {
+    margin-top: 50px;
+  }
+  @include breakpoint-mf("my") {
+    margin-top: 30px;
+    @include flex(row, center, center);
+    gap: 65px;
+  }
+  img {
+    display: none;
+    @include breakpoint-mf("my") {
+      display: block;
+    }
+  }
+}
+.login-section__title {
+  color: $primaryBlue;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  @include breakpoint-mf("md") {
+    font-size: 32px;
+  }
+  @include breakpoint-mf("my") {
+    margin-bottom: 20px;
+  }
+}
+.login-section__form {
+  @include flex(column, center, center);
+  width: 255px;
+  gap: 30px;
+  @include breakpoint-mf("md") {
+    width: 490px;
+    gap: 50px;
+  }
+  @include breakpoint-mf("my") {
+    width: 340px;
+    gap: 35px;
+  }
+}
+.login-section__form-input-wrapper {
+  position: relative;
+  width: 100%;
+  svg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 15px;
+    top: 9px;
+    @include breakpoint-mf("md") {
+      width: 35px;
+      height: 35px;
+      left: 18px;
+      top: 16px;
+    }
+    @include breakpoint-mf("my") {
+      width: 25px;
+      height: 25px;
+      left: 15px;
+      top: 12px;
+    }
+  }
+}
+.login-section__form-input {
+  font-family: inherit;
+  color: $primaryBlue;
+  background-color: $secondaryLight;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 30px;
+  padding: 20px 20px 20px 40px;
+  transition: background-color 0.2s ease-in-out;
+  &:focus {
+    background-color: darken($secondaryLight, $amount: 10%);
+  }
+  @include breakpoint-mf("md") {
+    padding: 20px 20px 20px 65px;
+    font-size: 25px;
+    height: 70px;
+  }
+  @include breakpoint-mf("my") {
+    padding: 20px 20px 20px 50px;
+    font-size: 22px;
+    height: 50px;
+  }
+}
+.login-section__form-input-error {
+  font-size: 11px;
+  position: absolute;
+  right: 15px;
+  bottom: -15px;
+  @include breakpoint-mf("md") {
+    font-size: 15px;
+    right: 20px;
+    bottom: -20px;
+  }
+  @include breakpoint-mf("my") {
+    font-size: 13px;
+  }
+}
+.login-section__form-submit-btn {
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  background-color: $primaryDark;
+  color: $secondaryLight;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 50px;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: $primaryBlue;
+  }
+  @include breakpoint-mf("md") {
+    font-size: 26px;
+    height: 70px;
+  }
+  @include breakpoint-mf("my") {
+    font-size: 20px;
+    height: 50px;
+  }
+}
+.login-section__message {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 19px;
+  color: $primary;
+  a {
+    color: $primaryLight;
+    text-decoration: underline;
+  }
+  @include breakpoint-mf("md") {
+    font-size: 20px;
+  }
+  @include breakpoint-mf("my") {
+    font-size: 18px;
+  }
+}
+.login-section__request-bad-res {
+  text-align: center;
+  color: red;
+  @include breakpoint-mf("md") {
+    font-size: 22px;
+  }
+}

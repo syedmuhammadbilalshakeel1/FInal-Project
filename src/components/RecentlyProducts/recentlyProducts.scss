@@ -1,0 +1,18 @@
+.last{
+  margin-top: 25px;
+}
+
+.recently-card > div:nth-child(8) {
+  @media (max-width: 1169px){
+    display: none;
+  }
+}
+.recently-card > div:nth-child(7) {
+  @media (max-width: 1169px) {
+    display: none;
+  }
+}
+
+.recently-viewed__title{
+  text-align: center;
+}

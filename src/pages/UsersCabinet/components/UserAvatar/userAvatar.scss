@@ -1,0 +1,62 @@
+.user-avatar {
+  width: 100%;
+  @include flex(column, center, center);
+}
+.user-avatar__img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-avatar__btns-wrap {
+  margin-top: 10px;
+  @include flex(row, center, center);
+  gap: 40px;
+}
+.input-file {
+  position: relative;
+  display: inline-block;
+}
+.input-file span,
+.user-avatar__del-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: middle;
+  color: rgb(255 255 255);
+  text-align: center;
+  border-radius: 4px;
+  line-height: 22px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  transition: background-color 0.1s;
+}
+.input-file span {
+  background-color: #419152;
+  &:hover {
+    background-color: lighten($color: #419152, $amount: 20%);
+  }
+  &:active {
+    background-color: darken($color: #419152, $amount: 20%);
+  }
+}
+.user-avatar__del-btn {
+  background-color: red;
+  &:hover {
+    background-color: lighten($color: red, $amount: 20%);
+  }
+  &:active {
+    background-color: darken($color: red, $amount: 20%);
+  }
+}
+.input-file input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}

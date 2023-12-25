@@ -1,0 +1,28 @@
+.product-detail-section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @include breakpoint-mf('sm') {
+    padding-top: 40px;
+  }
+
+  @include breakpoint-mf('my') {
+    padding-top: 42px;
+  }
+}
+
+.product-detail__wrap {
+  @include breakpoint-mf('xl') {
+    display: grid;
+    grid-template-columns: 540px 1fr;
+    height: fit-content;
+  }
+}
+
+.product-detail__info-wrap {
+  @include breakpoint-mf('xl') {
+    padding-left: 70px;
+    @include flex(column, space-between, flex-start);
+  }
+}
+

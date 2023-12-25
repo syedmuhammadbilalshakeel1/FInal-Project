@@ -1,0 +1,183 @@
+.searched-product {
+   width: 100%;
+   @include flex (row, flex-start, center);
+   margin-top: 15px;
+   gap: 15px;
+
+   @include breakpoint-mf('xxs') {
+      gap: 20px;
+      margin-top: 12px;
+   }
+
+
+   @include breakpoint-mf('sm') {
+      gap: 20px;
+      margin-top: 15px;
+      width: 50%;
+   }
+
+   @include breakpoint-mf('md') {
+      width: 100%;
+      gap: 7px;
+   }
+
+   @media (min-width: 840px) {
+      gap: 8px;
+   }
+
+   @media (min-width: 900px) {
+      gap: 10px;
+   }
+
+   @include breakpoint-mf('my') {
+      gap: 15px;
+   }
+
+   @include breakpoint-mf('lg') {
+      gap: 20px;
+   }
+
+   @include breakpoint-mf('xl') {}
+
+   &__photo {
+      margin-left: 5px;
+      width: 75px;
+      height: 70px;
+      border-radius: 10px;
+
+      @include breakpoint-mf('xxs') {
+         width: 75px;
+         height: 75px;
+      }
+
+      @media (min-width: 450px) {
+         width: 85px;
+         height: 80px;
+      }
+
+      @include breakpoint-mf('sm') {
+         width: 85px;
+         height: 80px;
+      }
+
+      @include breakpoint-mf('md') {
+         width: 65px;
+         height: 60px;
+      }
+
+      @media (min-width: 840px) {
+         width: 70px;
+         height: 65px;
+      }
+
+      @include breakpoint-mf('my') {
+         width: 80px;
+         height: 70px;
+      }
+
+      @include breakpoint-mf('lg') {
+         width: 85px;
+         height: 75px;
+      }
+
+      @include breakpoint-mf('xl') {
+         width: 90px;
+         height: 80px;
+      }
+   }
+
+   &__description {
+      height: 100%;
+      max-width: 165px;
+      gap: 15px;
+      @include flex(column, space-between, space-between);
+
+      @media (min-width: 450px) {
+         max-width: 100%;
+      }
+
+      @media (min-width: 640px) {
+         max-width: 175px;
+      }
+
+      @include breakpoint-mf('md') {
+         max-width: 130px;
+      }
+
+      @media (min-width: 840px) {
+         max-width: 150px;
+      }
+
+      @include breakpoint-mf('my') {
+         max-width: 200px;
+      }
+
+      @include breakpoint-mf('lg') {
+         max-width: 250px;
+      }
+   }
+
+   &__name {
+      font-size: 18px;
+      color: $primary;
+
+      @media (min-width: 450px) {
+         font-size: 20px;
+      }
+
+      @include breakpoint-mf('md') {
+         font-size: 15px;
+      }
+
+      @media (min-width: 840px) {
+         font-size: 16px;
+      }
+
+      @include breakpoint-mf('my') {
+         font-size: 17px;
+      }
+
+      @include breakpoint-mf('lg') {
+         font-size: 18px;
+      }
+   }
+
+   &__prices-wrap {
+      @include flex(row, flex-start, center);
+      font-size: 16px;
+      gap: 25px;
+
+      @include breakpoint-mf('md') {
+         width: 100%;
+         gap: 10px;
+      }
+
+      @include breakpoint-mf('my') {
+         gap: 20px;
+      }
+
+      @include breakpoint-mf('lg') {
+         gap: 25px;
+      }
+   }
+
+   &__price {
+      @include breakpoint-mf('lg') {
+         font-size: 18px;
+      }
+
+      &--curr {
+         font-weight: 500;
+      }
+
+      &--prev {
+         text-decoration: line-through;
+         color: red;
+      }
+   }
+
+   &__skeleton {
+      @extend .searched-product__photo;
+      background-color: $secondary;
+   }
+}

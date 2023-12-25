@@ -1,0 +1,213 @@
+.about {
+  margin-top: 30px;
+  color: $primary;
+  font-family: "Roboto", sans-serif;
+  p {
+    text-align: left;
+    margin: 0px 0px 15px 25px;
+    color: $primaryLight;
+    font-family: "Roboto", sans-serif;
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 18px, 22px);
+      margin: 0px 0px 10px 25px;
+    }
+    @include breakpoint-mf("md") {
+      @include fonts(400, 20px, 24px);
+      margin: 0px 0px 10px 25px;
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 22px, 26px);
+      margin: 10px 0px 10px 25px;
+    }
+  }
+  &__main {
+    @include flex(column, center, center);
+    @include breakpoint-mf("md") {
+      @include fonts(700, 26px, 40px);
+    }
+    @include breakpoint-bet(1020px, 1920px) {
+      @include flex(row, space-between, flex-start);
+      @include fonts(700, 40px, 50px);
+    }
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 16px;
+    color: $primary;
+    margin-top: 0px;
+    @include breakpoint-mf("xxs") {
+      @include fonts(700, 20px, 22px);
+      margin-top: 0px;
+    }
+    @include breakpoint-mf("xs") {
+      @include fonts(700, 28px, 28px);
+      margin-top: 5px;
+    }
+    @include breakpoint-mf("sm") {
+      @include fonts(700, 32px, 32px);
+      margin-top: 5px;
+    }
+    @include breakpoint-mf("md") {
+      @include fonts(700, 38px, 37px);
+      margin-top: 5px;
+    }
+    @include breakpoint-bet(1120px,1920px) {
+      @include fonts(700, 59px, 56px);
+    }
+    @include breakpoint-bet(320px, 1019px) {
+      text-align: center;
+    }
+  }
+  &__img {
+    max-width: 80%;
+    @include breakpoint-mf("xxs") {
+      max-width: 80%;
+    }
+    @include breakpoint-mf("md") {
+      max-width: 80%;
+    }
+    @include breakpoint-mf("xl") {
+      max-width: 100%;
+    }
+  }
+  &__item {
+    @include flex(row, flex-start, center);
+    margin: 10px 0px 10px 0px;
+    font-size: 18px;
+    line-height: 22px;
+    @include breakpoint-mf("xs") {
+      @include fonts(700, 24px, 26px);
+      margin: 0px 0px 10px 0px;
+    }
+    @include breakpoint-mf("md") {
+      @include fonts(700, 26px, 30px);
+      margin: 0px 0px 10px 0px;
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(700, 28px, 30px);
+      margin: 20px 0px 10px 0px;
+    }
+  }
+  &__icons {
+    color: $primary;
+    max-width: 8%;
+    max-height: 8%;
+    visibility: hidden;
+    @include breakpoint-mf("sm") {
+      margin-right: 10px;
+      max-width: 10%;
+      max-height: 10%;
+      visibility: visible;
+    }
+    @include breakpoint-mf("md") {
+      margin-right: 10px;
+      max-width: 9%;
+      max-height: 9%;
+      visibility: visible;
+    }
+    @include breakpoint-mf("xl") {
+      margin-right: 10px;
+      color: $primary;
+      width: 90px;
+      visibility: visible;
+    }
+  }
+  &__list {
+    @include flex(column, center, center);
+    gap: 20px;
+    &-items {
+      @include flex(column, center, center);
+      position: relative;
+    }
+    &-item {
+      position: absolute;
+      width: 260px;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include flex(column, center, center);
+    }
+    &-img {
+      @include flex(column, center, center);
+    }
+    &-title {
+      @include fonts(700, 26px, 23px);
+      font-family: "Roboto";
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      width: 100%;
+      @include breakpoint-mf("md") {
+        @include fonts(700, 28px, 35px);
+      }
+      @include breakpoint-mf("xl") {
+        @include fonts(700, 30px, 36px);
+      }
+    }
+    &-text {
+      @include fonts(700, 16px, 20px);
+      margin: 20px 0px 0px 40px;
+      font-family: "Roboto";
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-65%, +55%);
+      text-align: center;
+      width: 100%;
+      @include breakpoint-mf("md") {
+        @include fonts(700, 18px, 20px);
+        margin: 20px 0px 0px 40px;
+      }
+      @include breakpoint-mf("xl") {
+        @include fonts(700, 18px, 20px);
+        margin: 20px 0px 0px 40px;
+      }
+    }
+    @include breakpoint-mf("md") {
+      @include flex(row, center, flex-start);
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    @include breakpoint-mf("xl") {
+      @include flex(row, space-between, flex-start);
+      flex-wrap: nowrap;
+      gap: 30px;
+    }
+  }
+  &__item-contact {
+    @include flex(column, flex-start, flex-start);
+    @include fonts(700, 14px, 16px);
+    margin: 0px 0px 0px 80px;
+    gap: 5px;
+    @include breakpoint-bet(320px, 567px) {
+      @include fonts(700, 14px, 18px);
+      margin: 0px 0px 0px 50px;
+    }
+    @include breakpoint-mf("xs") {
+      @include fonts(700, 17px, 18px);
+      margin: 0px 0px 0px 70px;
+    }
+    @include breakpoint-mf("sm") {
+      @include fonts(700, 18px, 20px);
+      margin: 0px 0px 0px 90px;
+    }
+    @include breakpoint-mf("md") {
+      @include fonts(700, 19px, 18px);
+      margin: 0px 0px 0px 100px;
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(700, 19px, 18px);
+      margin: 0px 0px 0px 110px;
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(700, 20px, 20px);
+      margin: 0px 0px 0px 120px;
+    }
+    a,
+    span {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      color: $primaryLight;
+    }
+  }
+}

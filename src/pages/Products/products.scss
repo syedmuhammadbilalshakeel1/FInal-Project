@@ -1,0 +1,8 @@
+.products-section {
+    position: relative;
+    @include margin(33px, 33px);
+    display: block;
+    @include breakpoint-mf("sm"){
+        display: flex;
+    }
+ }

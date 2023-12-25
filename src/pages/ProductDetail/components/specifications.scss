@@ -1,0 +1,78 @@
+.product-detail__specs-block {
+  margin-top: 50px;
+  padding-top: 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $secondary;
+  }
+}
+
+.product-detail__specs-title {
+  color: $primaryLight;
+  @include fonts(400, 20px, 30px);
+  margin-top: 0;
+
+  @include breakpoint-mf('sm') {
+    color: $primary;
+    @include fonts(400, 25px, 38px);
+  }
+
+  @include breakpoint-mf('xl') {
+    color: $primaryLight;
+    @include fonts(400, 35px, 50px);
+  }
+}
+
+.product-detail__specs-table {
+  width: 100%;
+}
+
+.product-detail__specs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 30px;
+}
+
+.product-detail__specs-item {
+  @include flex(row, flex-start, center);
+  gap: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-detail__specs-data {
+  @include fonts(400, 14px, 21px);
+  color: $primaryLight;
+  display: inline-block;
+  width: fit-content;
+  margin-right: 15px;
+
+  @include breakpoint-mf('sm') {
+    @include fonts(400, 20px, 30px);
+  }
+
+  @include breakpoint-mf('lg') {
+    @include fonts(400, 20px, 30px);
+  }
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &--value {
+    @include fonts(500, 14px, 21px);
+    color: $primary;
+
+    @include breakpoint-mf('sm') {
+      @include fonts(500, 22px, 33px);
+    }
+  }
+}

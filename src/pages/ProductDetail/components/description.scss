@@ -1,0 +1,103 @@
+.product-detail__info {
+  padding-top: 50px;
+
+  @include breakpoint-mf('xl') {
+    padding-top: 0;
+  }
+}
+
+.product-detail__name {
+  color: $primaryLight;
+  @include fonts(400, 25px, 38px);
+
+  @include breakpoint-mf('sm') {
+    color: $primary;
+    @include fonts(400, 30px, 35px);
+  }
+
+  @include breakpoint-mf('xl') {
+    color: $primaryLight;
+    @include fonts(400, 40px, 47px);
+  }
+}
+
+.product-detail__description {
+  margin-top: 10px;
+  color: $secondary;
+  @include fonts(400, 14px, 21px);
+  text-align: left;
+
+  @include breakpoint-mf('sm') {
+    margin-top: 20px;
+    color: $primaryLight;
+    @include fonts(400, 25px, 30px);
+  }
+
+  @include breakpoint-mf('xl') {
+    margin-top: 30px;
+    color: $secondary;
+    @include fonts(400, 18px, 35px);
+  }
+}
+
+.product-detail__specs-link {
+  color: $primaryLight;
+  display: block;
+  @include margin(20px, 20px);
+  @include fonts(400, 14px, 21px);
+
+  @include breakpoint-mf('sm') {
+    @include fonts(400, 20px, 30px);
+  }
+
+  &:hover {
+    color: darken($primaryLight, 15%);
+  }
+}
+
+//------BASIC SPECS----------------------------------------
+
+.product-detail__basic-specs-wrap {
+  width: 100%;
+  gap: 15px;
+  @include flex(row, space-between, center);
+}
+
+.product-detail__basic-specs {
+  @include flex(row, flex-start, center);
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @include breakpoint-mf('md') {
+    gap: 0 25px;
+  }
+}
+
+.product-detail__basic-spec {
+  width: fit-content;
+  color: $primaryLight;
+  text-align: left;
+  @include fonts(400, 14px, 21px);
+
+  @include breakpoint-mf('sm') {
+    @include fonts(400, 20px, 30px);
+  }
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.product-detail__basic-spec-value {
+  display: inline-block;
+  color: $primary;
+  @include fonts(500, 14px, 21px);
+
+  @include breakpoint-mf('sm') {
+    @include fonts(500, 22px, 33px);
+  }
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}

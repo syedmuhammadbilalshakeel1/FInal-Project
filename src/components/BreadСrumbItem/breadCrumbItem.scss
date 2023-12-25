@@ -1,0 +1,23 @@
+.navigation__block-current {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   color: $primary;
+
+   @include breakpoint-mf('xs') {
+      font-size: 18px;
+   }
+
+   @include breakpoint-mf('md') {
+      font-size: 20px;
+      line-height: 24px;
+   }
+}
+
+.navigation__block-separator::after {
+   content: "→";
+
+   @include breakpoint-mf('md') {
+      height: 15px;
+   }
+}

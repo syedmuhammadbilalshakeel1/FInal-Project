@@ -1,0 +1,55 @@
+.checkout-section__form-title {
+  color: $primaryBlue;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  @include breakpoint-mf("md") {
+    font-size: 32px;
+  }
+}
+.checkout-section__form-select {
+  @include flex(row, center, center);
+  margin-bottom: 20px;
+}
+.checkout-section__form-select-btn {
+  height: 50px;
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  @include fonts(400, 16px, 35px);
+  color: $secondary;
+  transition: all 0.1s ease-in-out;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    color: $primaryBlue;
+  }
+}
+.checkout-section__form-select-btn--active {
+  color: $primaryBlue;
+  border-bottom: 1px solid $primaryBlue;
+}
+
+.checkout-section__form-submit-btn {
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  background-color: $primaryDark;
+  color: $secondaryLight;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 50px;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: $primaryBlue;
+  }
+  @include breakpoint-mf("xs") {
+    font-size: 26px;
+    height: 70px;
+  }
+  @include breakpoint-mf("my") {
+    font-size: 20px;
+    height: 50px;
+  }
+}

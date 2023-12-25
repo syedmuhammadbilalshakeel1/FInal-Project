@@ -1,0 +1,550 @@
+.card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.all-card-container {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  @media (min-width: 640px) {
+    width: 100%;
+    height: 260px;
+  }
+
+  @media (min-width: 860px) {
+    width: 100%;
+    height: 360px;
+  }
+
+  &__rows {
+    display: flex;
+    margin-top: 20px;
+    width: 110%;
+    height: 110px;
+  }
+}
+
+.card {
+  position: relative;
+  width: 129px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.05);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 630px) {
+    width: 196px;
+    height: 322px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  @include breakpoint-mf("xl") {
+    width: 269px;
+    height: 418px;
+    border-radius: 20px;
+  }
+
+  &__btn {
+    position: absolute;
+    width: 98px;
+    height: 19px;
+    margin-top: 176px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+
+    @media (min-width: 630px) {
+      width: 165px;
+      height: 29px;
+      margin-top: 276px;
+      margin-left: 16px;
+      gap: 12px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 205px;
+      height: 36px;
+      margin-top: 370px;
+      margin-left: 32px;
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  &__btn-card-container {
+    width: 25px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @media (min-width: 630px) {
+      width: 41px;
+      height: 28px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 52px;
+      height: 36px;
+    }
+  }
+
+  &__btn-svg-cart {
+    width: 10px;
+    height: 12px;
+    background-color: white;
+
+    @media (min-width: 630px) {
+      width: 18px;
+      height: 20px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 23px;
+      height: 26px;
+    }
+  }
+}
+
+.all-card {
+  position: relative;
+  width: 129px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 4px 8px 10px 0 rgba(0, 0, 0, 0.05);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 860px) {
+    width: 183px;
+    height: 289px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  @include breakpoint-mf("xl") {
+    width: 203px;
+    height: 296px;
+  }
+
+  &__rows {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: none;
+  }
+
+  &__product-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+    width: 80%;
+
+    @include breakpoint-mf("sm") {
+      font-size: 10px;
+    }
+
+    @include breakpoint-mf("md") {
+      font-size: 11px;
+    }
+
+    @include breakpoint-mf("my") {
+      font-size: 14px;
+    }
+
+    @include breakpoint-mf("lg") {
+      font-size: 14px;
+    }
+
+    @include breakpoint-mf("xl") {
+      font-size: 16px;
+    }
+  }
+
+  &__product-name--rows {
+    font-size: 18px;
+    width: 125%;
+  }
+
+  &__prices-wrap {
+    @include flex(row, center, center);
+    flex-direction: column;
+    margin-left: 4px;
+    font-size: 10px;
+    gap: 2px;
+
+    @include breakpoint-mf("xs") {
+      font-size: 10px;
+      gap: 4px;
+    }
+
+    @include breakpoint-mf("md") {
+      font-size: 11px;
+    }
+
+    @include breakpoint-mf("my") {
+      font-size: 14px;
+    }
+
+    @include breakpoint-mf("lg") {
+      margin-left: 8px;
+      font-size: 16px;
+      gap: 5px;
+    }
+
+    @include breakpoint-mf("xl") {
+      font-size: 18px;
+    }
+  }
+
+  &__prices-wrap--rows {
+    @include flex(row, flex-end, center);
+    flex-direction: column;
+    width: 30%;
+    margin-top: 28%;
+    margin-left: 4px;
+    font-size: 20px;
+    gap: 2px;
+  }
+
+  &__price {
+    @include flex(row, center, center);
+
+    @include breakpoint-mf("lg") {
+      font-size: 18px;
+    }
+
+    &--curr {
+      font-size: 10px;
+      @include flex(row, center, center);
+
+      @include breakpoint-mf("md") {
+        font-size: 11px;
+      }
+
+      @include breakpoint-mf("my") {
+        font-size: 14px;
+      }
+
+      @include breakpoint-mf("xl") {
+        font-size: 18px;
+      }
+    }
+
+    &--curr-rows {
+      @include flex(row, center, center);
+      margin-top: 10%;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    &--prev {
+      @include flex(row, center, center);
+      text-decoration: line-through;
+      color: red;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    width: 98px;
+    height: 19px;
+    margin-top: 176px;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+
+    @media (min-width: 860px) {
+      width: 165px;
+      height: 29px;
+      margin-top: 244px;
+      margin-left: 9px;
+      gap: 12px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 154px;
+      height: 25px;
+      margin-top: 260px;
+      margin-left: 25px;
+      display: flex;
+      gap: 11px;
+    }
+
+    &--rows {
+      position: absolute;
+      width: 200px;
+      height: 19px;
+      display: flex;
+      margin-top: 65px;
+      margin-left: 35%;
+      gap: 40px;
+    }
+  }
+
+  &__btn-card-container {
+    width: 25px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    @media (min-width: 860px) {
+      width: 41px;
+      height: 28px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 39px;
+      height: 25px;
+    }
+  }
+
+  &__btn-card-container--rows {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__btn-svg-cart {
+    width: 10px;
+    height: 12px;
+    background-color: white;
+
+    @media (min-width: 860px) {
+      width: 18px;
+      height: 20px;
+    }
+
+    @include breakpoint-mf("xl") {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &__btn-svg-cart--rows {
+    width: 40px;
+    height: 30px;
+    background-color: white;
+  }
+
+  &__block {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    width: 129px;
+    height: 36px;
+
+    @media (min-width: 860px) {
+      width: 183px;
+      height: 36px;
+    }
+
+    @include breakpoint-mf("xl") {
+      margin-top: 15px;
+      height: 36px;
+    }
+  }
+
+  &__like {
+    display: flex;
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    &-btn {
+      @include breakpoint-bet(320px, 859px) {
+        width: 18px;
+        height: 13px;
+      }
+
+      @include breakpoint-bet(860px, 1199px) {
+        width: 28px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      @include breakpoint-bet(1200px, 1940px) {
+        width: 30px;
+        height: 20px;
+        margin-top: 3px;
+      }
+    }
+
+    &-img {
+      @include breakpoint-bet(320px, 859px) {
+        width: 18px;
+        height: 13px;
+      }
+
+      @include breakpoint-bet(860px, 1199px) {
+        width: 28px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      @include breakpoint-bet(1200px, 1940px) {
+        width: 30px;
+        height: 20px;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &__likes-top {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    &-btn {
+      @include breakpoint-bet(320px, 629px) {
+        width: 18px;
+        height: 13px;
+      }
+
+      @include breakpoint-bet(630px, 1199px) {
+        width: 32px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      @include breakpoint-bet(1200px, 1940px) {
+        width: 37px;
+        height: 30px;
+      }
+    }
+
+    &-img {
+      @include breakpoint-bet(320px, 629px) {
+        width: 18px;
+        height: 13px;
+      }
+
+      @include breakpoint-bet(630px, 1199px) {
+        width: 32px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      @include breakpoint-bet(1200px, 1940px) {
+        width: 37px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__block--rows {
+    display: flex;
+    margin-left: 10px;
+    justify-content: space-between;
+    width: 60%;
+    height: 36px;
+  }
+}
+
+.unactive {
+  display: none;
+}
+
+.currency-icon {
+  width: 12px;
+  height: 10px;
+
+  @include breakpoint-mf("md") {
+    height: 12px;
+  }
+
+  @include breakpoint-mf("my") {
+    width: 14px;
+    height: 14px;
+  }
+
+  @include breakpoint-mf("xl") {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.currency-icon--rows {
+  width: 16px;
+  height: 16px;
+}
+
+.compare-btn {
+  background-color: $white;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  top: -168px;
+  right: -2px;
+
+  @include breakpoint-bet(860px, 1199px) {
+    width: 32px;
+    height: 28px;
+    top: -230px;
+  }
+
+  @include breakpoint-bet(1200px, 1940px) {
+    width: 30px;
+    height: 25px;
+    top: -250px;
+  }
+
+  &--clicked {
+    background-color: #535353;
+  }
+}

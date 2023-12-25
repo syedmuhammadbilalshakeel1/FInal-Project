@@ -1,0 +1,7 @@
+.cart-list__items {
+  @include flex(column, flex-start , flex-start);
+  gap: 20px;
+  @include breakpoint-mf('md'){
+    gap: 30px;
+  }
+}

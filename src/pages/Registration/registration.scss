@@ -1,0 +1,140 @@
+.registration-section {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  @include flex(column, center, center);
+  @include breakpoint-mf("md") {
+    margin-top: 50px;
+  }
+  img {
+    display: none;
+    @include breakpoint-mf("my") {
+      display: block;
+    }
+  }
+}
+
+.registration-section__title {
+  color: $primaryBlue;
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  @include breakpoint-mf("md") {
+    font-size: 32px;
+    grid-column: 1 / 3;
+  }
+}
+
+.registration-section__form {
+  @include flex(column, center, center);
+  width: 255px;
+  gap: 20px;
+  @include breakpoint-mf("md") {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+.registration-section__form-input-wrapper {
+  position: relative;
+  width: 100%;
+  svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 13px;
+    top: 9px;
+    @include breakpoint-mf("md") {
+      width: 25px;
+      height: 25px;
+      left: 15px;
+      top: 12px;
+    }
+  }
+}
+
+.registration-section__form-input {
+  font-family: inherit;
+  color: $primaryBlue;
+  background-color: $secondaryLight;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 30px;
+  padding: 20px 20px 20px 40px;
+  transition: background-color 0.2s ease-in-out;
+  &:focus {
+    background-color: darken($secondaryLight, $amount: 10%);
+  }
+  &::placeholder {
+    font-family: inherit;
+  }
+  @include breakpoint-mf("md") {
+    padding: 20px 20px 20px 50px;
+    font-size: 22px;
+    height: 50px;
+  }
+}
+
+.registration-section__form-input-error {
+  font-size: 11px;
+  position: absolute;
+  right: 5px;
+  bottom: -15px;
+  @include breakpoint-mf("md") {
+    font-size: 12px;
+    right: 15px;
+    bottom: -20px;
+  }
+  @include breakpoint-mf("my") {
+    font-size: 13px;
+  }
+}
+
+.registration-section__form-submit-btn {
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  background-color: $primaryDark;
+  color: $secondaryLight;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 50px;
+  transition: background-color 0.1s ease-in-out;
+  &:hover {
+    background-color: $primaryBlue;
+  }
+  @include breakpoint-mf("md") {
+    font-size: 20px;
+    height: 50px;
+  }
+}
+
+.registration-section__message {
+  font-size: 14px;
+  line-height: 19px;
+  color: $primary;
+  a {
+    color: $primaryLight;
+    text-decoration: underline;
+  }
+  @include breakpoint-mf("md") {
+    font-size: 18px;
+  }
+}
+.registration-section__request-bad-res {
+  text-align: center;
+  color: red;
+  grid-column: 1 / 3;
+}
+.registration-section__request-good-res {
+  text-align: center;
+  color: $primary;
+  grid-column: 1 / 3;
+  @include breakpoint-mf("md") {
+    font-size: 20px;
+  }
+}

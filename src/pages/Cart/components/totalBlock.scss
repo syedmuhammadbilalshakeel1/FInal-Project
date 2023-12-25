@@ -1,0 +1,91 @@
+.total-block {
+  @include flex(column, center, center);
+  @include breakpoint-mf("md") {
+    align-items: flex-end;
+  }
+}
+
+.total-block-wrapper {
+  position: relative;
+  @include flex(column, center, center);
+  text-align: center;
+  padding: 25px 30px;
+  min-width: 300px;
+  margin-top: 50px;
+  background-color: $secondaryLight;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  @include breakpoint-mf("sm") {
+    min-width: 450px;
+  }
+  @include breakpoint-mf("md") {
+    padding: 50px 55px;
+    min-width: 500px;
+  }
+}
+
+.total-block__item {
+  @include flex(row, center);
+  width: 100%;
+  gap: 60px;
+
+
+  &:nth-child(1) {
+    font-size: 14px;
+    font-weight: 700;
+    @include breakpoint-mf("xs") {
+      font-size: 18px;
+    }
+  }
+}
+
+.total-block-line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid black;
+}
+
+.cart-buttons {
+  @include flex(row);
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.cart-button {
+  @include flex(row, center, center);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid $primary;
+  width: 100px;
+  height: 25px;
+  white-space: nowrap;
+  @include breakpoint-mf("sm") {
+    font-size: 20px;
+    width: 150px;
+    height: 35px;
+  }
+
+  &-close {
+    color: black;
+  }
+
+  &-checkout {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.total-block__value-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 10px;
+  font-weight: 700;
+  @include breakpoint-mf("xs") {
+    width: 18px;
+    height: 18px;
+  }
+}

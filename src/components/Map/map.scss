@@ -1,0 +1,48 @@
+.map {
+   &__container {
+      height: 320px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      overflow: hidden;
+
+      @include breakpoint-mf('xxs') {
+         height: 350px;
+         margin-bottom: 25px;
+         margin-top: 0px;
+      }
+
+      @include breakpoint-mf('xs') {
+         height: 400px;
+         margin-bottom: 30px;
+         margin-top: 5px;
+      }
+
+      @include breakpoint-mf('md') {
+         height: 450px;
+         margin-bottom: 35px;
+         margin-top: 5px;
+      }
+
+      @include breakpoint-mf('my') {
+         height: 480px;
+         margin-bottom: 40px;
+         margin-top: 5px;
+      }
+
+      @include breakpoint-mf('xl') {
+         height: 520px;
+         margin-bottom: 45px;
+         margin-top: 0px;
+      }
+   }
+
+   &__popup {
+      padding-bottom: 23px;
+      margin-left: 1px;
+   }
+
+   &__title {
+      text-align: center;
+
+   }
+}

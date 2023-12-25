@@ -1,0 +1,65 @@
+.benefits-section{
+    padding: 28px 0;
+    &-list{
+        margin-top: 30px;
+        gap: 30px;
+        @include flex(column, center, center);
+        &__item{
+            @include flex(column, center, center);
+            &-title {
+                @include fonts(400, 20px, 23px);
+               color:#082032;
+               font-family: "Roboto";
+               @include breakpoint-mf("xl"){
+                @include fonts(400, 32px, 38px);
+               }
+            }
+            &-text{
+                color: #5E5E5E;
+                @include fonts(400, 16px, 35px);
+                margin: 0 15px;
+                @include breakpoint-mf("md"){
+                    @include fonts(400, 18px, 35px);
+                }
+                @include breakpoint-mf("xl"){
+                    @include fonts(400, 22px, 35px);
+                    margin: 0 40px;
+                }
+            }
+            @include breakpoint-mf("md"){
+                width: 33.3%;
+            }
+            &-img{
+                @include breakpoint-mf("xl"){
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        @include breakpoint-mf("md"){
+            @include flex(row, center, flex-start);
+            flex-wrap: wrap;
+        }
+        @include breakpoint-mf("xl"){
+            @include flex(row, space-between, flex-start);
+            flex-wrap: nowrap;
+            gap: 50px;
+        }
+    }
+}
+
+.photo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .background {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-color: $secondaryLight;
+    border-radius: 50%;
+    z-index: -1;
+  }

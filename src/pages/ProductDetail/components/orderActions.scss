@@ -1,0 +1,188 @@
+.product-detail__order-actions {
+  width: 100%;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min(100px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
+
+  @include breakpoint-mf('xs') {
+    grid-template-rows: repeat(2, min(100px, 1fr));
+  }
+
+  @include breakpoint-mf('xl') {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+}
+
+//------PRICE----------------------------------------
+
+.product-detail__price-wrap {
+  @include flex(column-reverse, flex-start, flex-start);
+  grid-area: 1 / 1 / 2 / 2;
+
+  @include breakpoint-mf('xl') {
+    @include margin(0, 0);
+  }
+}
+
+.product-detail__price-wrap > .product-detail__price {
+  align-self: unset;
+}
+
+.product-detail__price {
+  @include fonts(400, 25px, 30px);
+  @include flex(row, flex-start, center);
+  color: $primary;
+  text-align: left;
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: flex-end;
+
+  @include breakpoint-mf('md') {
+    @include fonts(400, 40px, 50px);
+  }
+
+  &-current {
+    color: #f84147;
+  }
+
+  &-previous {
+    @include fonts(400, 14px, 24px);
+    text-decoration: line-through;
+    color: $primary;
+  }
+}
+
+.product-detail__currency-icon {
+  height: 25px;
+  width: 25px;
+
+  &-previous {
+    height: 19px;
+    width: 25px;
+  }
+
+  @include breakpoint-mf('md') {
+    height: 45px;
+    width: 45px;
+
+    &-previous {
+      height: 19px;
+      width: 45px;
+    }
+  }
+}
+
+//-------ADD TO FAVS BUTTON-------------------------------
+.order-actions__btns-wrap {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: flex-end;
+  align-self: center;
+  @include flex(row, flex-start, center);
+}
+
+.order-actions__favs-btn {
+  background-color: unset;
+  margin-right: 15px;
+  cursor: default;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.order-actions__favs-icon {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+//------ADD BUTTON----------------------------------------
+
+.order-actions__add-btn {
+  padding: unset;
+  color: $primaryLight;
+  border: 2px solid $primaryLight;
+  background-color: $secondaryLight;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+
+  @include breakpoint-mf('lg') {
+    background-color: $primaryDark;
+    border-color: $primaryDark;
+    color: $white;
+  }
+
+  &:hover {
+    background-color: darken($primaryDark, 5%);
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: darken($primaryDark, 5%);
+  }
+
+  &-inner {
+    display: inline-block;
+    padding: 10px 13px;
+    @include fonts(400, 12px, 18px);
+
+    @include breakpoint-mf('sm') {
+      padding: 13px 15px;
+      @include fonts(400, 20px, 30px);
+    }
+
+    @include breakpoint-mf('lg') {
+      padding: 14px 16px;
+      @include fonts(400, 15px, 17px);
+    }
+
+    @include breakpoint-mf('xl') {
+      padding: 14px 20px;
+    }
+  }
+}
+
+//------COLOR----------------------------------------
+
+.product-detail__color-wrap {
+  grid-area: 2 / 1 / 3 / 3;
+
+  @include breakpoint-mf('xs') {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.product-detail__color-list {
+  @include flex(row, flex-start, center);
+  padding-left: 3px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-detail__color-list-item {
+  display: block;
+  height: 32px;
+  width: 32px;
+  border: 1px solid $primary;
+  border-radius: 100%;
+
+  &--active {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      border: 1px solid green;
+      border-radius: 100%;
+    }
+  }
+}

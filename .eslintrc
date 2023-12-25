@@ -1,0 +1,93 @@
+{
+  "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "extends": [
+    "standard",
+    "react-app",
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "plugins": [
+    "jsx-a11y"
+  ],
+  "rules": {
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true
+      }
+    ], //проверяет наличие пробелов в конце строк,по настройке будет игнорить их
+    "no-return-assign": 0, //проверяет, содержит ли выражение присваивание (=) внутри return(правило отключено)
+    "eol-last": 0, //определяет, должна ли в конце файла быть пустая строка(правило отключено)
+    "semi": "warn", //определяет, должны ли в JavaScript-коде использоваться точки с запятой(будет выдавать предупреждение)
+    "camelcase": 0, //отвечает за стиль именования переменных(правило отключено)
+    "object-curly-spacing": 0, //отвечает за пробелы внутри фигурных скобок объектов(правило отключено)
+    "comma-dangle": 0, //отвечает за наличие или отсутствие запятой после последнего элемента в массивах(правило отключено)
+    "quotes": [
+      "warn",
+      "double"
+    ], //используем только двойные кавычки, на одинарные будет выдавать ошибки
+    "linebreak-style": "off", //в винде используеться формат переноса строки(CRLF),а ESLint автоматом ожидает(LF),настройка показывает наш формат(правило отключено)
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2
+      }
+    ], //определяет, сколько пустых строк допускается между строками кода
+    "react/jsx-wrap-multilines": "off", //определяет, как должны быть расположены скобки вокруг JSX-выражений(правило отключено)
+    "react/jsx-no-useless-fragment": "off", //определяет, требуется ли использование фрагментов (Fragment) в JSX, когда они содержат только один дочерний элемент(правило отключено)
+    "react/react-in-jsx-scope": "off", //это правило гарантирует, что идентификатор 'React' доступен в области видимости(то есть ипортирован)при использовании JSX(если написать"error" активируем это правило)
+    "indent": "off", //правило на количество пробелов отступа,можно было указать так ["error", 2],но в коде есть и 2 и 4 отступа(правило отключено)
+    "react/jsx-indent": "off", //правило отвечает за проверку отступов в JSX-коде(правило отключено)
+    "react/jsx-tag-spacing": "off", //требует пробел перед закрывающей скобкой в JSX,если указать"react/jsx-tag-spacing": "off" отключим это правило
+    "no-extra-semi": "warn", //предупреждает о лишних точках с запятой,указан "warn" в место "error",чтобы выдавало предупреждение
+    "prefer-const": "off", //проверяеть код и рекомендует использовать const вместо let для переменных, которые не изменяются(правило отключено)
+    "no-multi-spaces": "off", //правило на выдование ошибок при множественных пробелов(правило отключено)
+    "space-in-parens": "off", //пробелы внутри скобок должны быть обязательными(правило отключено)
+    "react/function-component-definition": "off", //проверка на неявного определения компонентов через присваивание(правило отключено)
+    "arrow-body-style": "off", //проверка требует перемещения возвращаемого значения сразу после '=>' (правило отключено)
+    "react/jsx-filename-extension": "off", //использование JSX в файлах с расширением .js не допускается(правило отключено)
+    "import/order": "warn", //импорт модулей должен быть организован в определенном порядке(правило отключено)
+    "react/jsx-indent-props": "off", //определяет отступы в компонентах(правило отключено)
+    "react/jsx-max-props-per-line": "warn", //доп. свойства как className,onClick,to должны быть размещены на новой строке в JSX компоненте
+    "react/jsx-closing-bracket-location": "off", //закрывающая скобка должна быть выровнена с открывающим тегом на следующей строке в JSX компоненте(правило отключено)
+    "react/jsx-curly-brace-presence": "off", //фигурные скобки {} в JSX компоненте являются излишними(Пример:to="/">)(правило отключено)
+    "react/jsx-one-expression-per-line": "off", //to={"/"}>Home</NavLink > в этом примере элемент Home должен быть помещен на новую строку в JSX (правило отключено)
+    "max-len": "off", //данная строка превышает максимально допустимую длину 100(правило отключено)
+    "react/jsx-closing-tag-location": "off", //закрывающий тег многострочного JSX-выражения должен быть на своей собственной строке(правило отключено)
+    "react/no-array-index-key": "off", //индексы массивов не должны использоваться в качестве ключей при создании элементов в JSX(правило отключено)
+    "array-bracket-spacing": "warn", //перед закрывающей скобкой ] не должно быть пробела
+    "react/self-closing-comp": "off", //пустые компоненты в JSX должны быть самозакрывающимися Пример:<span className="header__menu-lines"/>(правило отключено)
+    "padded-blocks": "off", //блок кода не должен быть окружен пустыми строками(правило отключено)
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": ["off"],
+    "react-hooks/exhaustive-deps": "off",
+    "react/no-unescaped-entities": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-unused-vars": "off",
+    "eslint-disable-next-line": "off",
+    "no-lonely-if": "warn",
+    "no-underscore-dangle": "off",
+    "no-alert": "off",
+    "default-param-last": "off",
+    "no-confusing-arrow": "off",
+    "no-nested-ternary": "warn",
+    "no-shadow": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "propWrapperFunctions": [
+      "forbidExtraProps"
+    ]
+  }
+}

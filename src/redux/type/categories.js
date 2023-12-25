@@ -1,0 +1,7 @@
+ const categoriesTypes = {
+  CATEGORIES_REQUEST: "CATEGORIES_REQUEST",
+  CATEGORIES_SUCCESS: "CATEGORIES_SUCCESS",
+  CATEGORIES_FAILURE: "CATEGORIES_FAILURE",
+};
+
+export default categoriesTypes;

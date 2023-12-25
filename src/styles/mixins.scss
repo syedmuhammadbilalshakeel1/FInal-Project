@@ -1,0 +1,51 @@
+$grid-breakpoints: (
+  xxs: 360px,
+  xs: 568px,
+  sm: 640px,
+  md: 768px,
+  ma: 840px,
+  my: 1024px,
+  lg: 1110px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1920px,
+);
+
+@mixin breakpoint-mf($size, $rule: min-width) {
+  @media (#{$rule}: map-get($grid-breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min-size, $max-size) {
+  $min: map-get($grid-breakpoints, $min-size);
+  $max: map-get($grid-breakpoints, $max-size) - 1px;
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin breakpoint-bet($min-size, $max-size) {
+  @media (min-width: $min-size) and (max-width: $max-size) {
+    @content;
+  }
+}
+
+@mixin flex($flex-direction, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin fonts($a, $b, $c) {
+  font-weight: $a;
+  font-size: $b;
+  line-height: $c;
+}
+
+@mixin margin($a, $b) {
+  margin-top: $a;
+  margin-bottom: $b;
+}

@@ -1,0 +1,105 @@
+.top-product {
+  text-align: center;
+  color: $primary;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.675px;
+  padding-top: 20px;
+
+  @media (min-width: 630px) {
+    padding-top: 50px;
+    font-size: 28px;
+  }
+  @media (min-width: 1170px) {
+    padding-top: 62px;
+    font-size: 45px;
+  }
+  &__wrapper {
+    width: 100%;
+    background-color: $secondaryLight;
+  }
+  &__card {
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+
+    @media (min-width: 430px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 630px) {
+      grid-column-gap: 10px;
+      grid-row-gap: 35px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1170px) {
+      margin-top: 63px;
+      grid-column-gap: 10px;
+      grid-row-gap: 45px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__btn-allProduct {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: white;
+    width: 128px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 40px auto;
+    &:hover {
+      svg {
+        transform: translateX(10px);
+      }
+    }
+    svg {
+      transition: 0.15s ease-in-out;
+    }
+
+    @media (min-width: 630px) {
+      width: 179px;
+      height: 46px;
+      font-size: 15px;
+      margin: 50px auto;
+    }
+    @media (min-width: 1170px) {
+      width: 218px;
+      height: 54px;
+      font-size: 18px;
+      margin: 66px auto;
+    }
+  }
+
+  &__svg {
+    padding-top: 2px;
+    width: 17px;
+    height: 17px;
+    @media (min-width: 630px) {
+      width: 17px;
+      height: 17px;
+    }
+    @media (min-width: 1170px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.flex_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-product__card > div {
+  display: flex;
+  justify-content: center;
+}

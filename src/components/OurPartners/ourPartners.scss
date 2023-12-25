@@ -1,0 +1,151 @@
+.our-partners {
+   @include flex(column, center, center);
+   width: 100%;
+
+   &__title {
+      padding-top: 20px;
+      margin-bottom: 40px;
+      color: $primary;
+
+      @include breakpoint-mf('md') {
+         padding-top: 50px;
+         margin-bottom: 44px;
+      }
+
+      @include breakpoint-mf('xl') {
+         padding-top: 110px;
+         margin-bottom: 70px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px 67px;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+
+      @include breakpoint-mf('xxs') {
+         gap: 45px 75px;
+         max-width: 330px;
+
+      }
+
+      @include breakpoint-mf('xs') {
+         gap: 50px 80px;
+         max-width: 560px;
+      }
+
+      @include breakpoint-mf('sm') {
+         gap: 50px 80px;
+         max-width: 600px;
+
+      }
+
+
+      @include breakpoint-mf('md') {
+         flex-wrap: nowrap;
+         max-width: 100%;
+         gap: 65px;
+         margin-bottom: 51px;
+      }
+
+      @include breakpoint-mf('my') {
+         gap: 85px;
+      }
+
+      @include breakpoint-mf('lg') {
+         gap: 100px;
+      }
+
+      @include breakpoint-mf('xl') {
+         gap: 120px;
+         margin-bottom: 110px;
+      }
+   }
+
+   &__item:nth-child(1) {
+      place-self: end;
+   }
+
+   &__logo {
+      width: 100px;
+      height: 23px;
+      vertical-align: middle;
+
+      @include breakpoint-mf('xxs') {
+         width: 110px;
+         height: 24px;
+      }
+
+      @include breakpoint-mf('xs') {
+         width: 140px;
+         height: 26px;
+      }
+
+      @include breakpoint-mf('sm') {
+         width: 150px;
+         height: 28px;
+      }
+
+      @include breakpoint-mf('md') {
+         width: 125px;
+         height: 30px;
+      }
+
+      @include breakpoint-mf('my') {
+         width: 150px;
+         height: 30px;
+      }
+
+      @include breakpoint-mf('lg') {
+         width: 160px;
+         height: 32px;
+      }
+
+      @include breakpoint-mf('xl') {
+         width: 195px;
+         height: 40px;
+      }
+
+      &--last {
+         @extend .our-partners__logo;
+         height: 30px;
+
+         @include breakpoint-mf('xxs') {
+
+            height: 31px;
+         }
+
+         @include breakpoint-mf('xs') {
+
+            height: 33px;
+         }
+
+         @include breakpoint-mf('sm') {
+
+            height: 35px;
+         }
+
+         @include breakpoint-mf('my') {
+
+            height: 37px;
+         }
+
+         @include breakpoint-mf('xl') {
+
+            height: 45px;
+         }
+      }
+   }
+}
+
+.skeleton__loader {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}

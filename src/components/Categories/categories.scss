@@ -1,0 +1,128 @@
+.category {
+
+  // .category__list
+  &--open {
+    display: block;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin: 30px 0 0 0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      border-bottom: 1px solid $secondary;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+
+  // .category__list-item
+
+  &__list-item {
+    padding-bottom: 13px;
+  }
+
+  // .category__list-link
+
+  &__list-link {
+    line-height: 19px;
+    color: #616467;
+    position: relative;
+    padding-bottom: 2px;
+    font-size: 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 2px solid $primaryLight;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover::after,
+    &:active:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+.subcategory {
+  // .subcategory__list
+
+  &__list {
+    display: none;
+    z-index: 100;
+  }
+
+  // .subcategory__list-link
+
+  &__list-link {
+    line-height: 19px;
+    color: #616467;
+    position: relative;
+    padding-bottom: 2px;
+
+    &:hover {
+      font-weight: 700;
+      transform: scaleX(1);
+      transition: transform 0.2s ease;
+    }
+  }
+}
+
+.category__list-item:hover .subcategory__list {
+  @include flex (row, space-around, center);
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  max-width: 1200px;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  @media (min-width: 768px) {
+    position: absolute;
+  }
+
+  // border-top: 1px solid $primaryLight
+  &::before {
+    margin-top: 30px;
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $primaryLight;
+  }
+}
+
+.skeleton__loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0;
+}

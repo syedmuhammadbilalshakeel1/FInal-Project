@@ -1,0 +1,38 @@
+.filter-section-sort{
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 20px;
+    &--position {
+        display: none;
+    }
+
+    
+
+    &-select {
+    width: 113px;
+    height: 24px;
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    text-align: center;
+    @include fonts(400, 14px, 18px);
+    font-family: "Roboto", sans-serif;
+    color: $primaryLight;
+    @include breakpoint-mf("sm"){
+        width: 150px;
+    }
+    }
+    &-text {
+        display: none;
+        @include breakpoint-mf("sm"){
+            display: block;
+        }
+    }
+    @include breakpoint-mf("sm"){
+        top: 5px;
+        right: 20px;
+        @include flex(row, flex-end, center);
+        gap: 20px;
+        z-index: 1;
+    }
+}

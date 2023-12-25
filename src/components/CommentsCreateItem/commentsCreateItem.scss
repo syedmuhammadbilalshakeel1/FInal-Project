@@ -1,0 +1,23 @@
+.comments__create-item-wrap {
+  background: $white;
+  border-radius: 4px;
+  padding: 20px;
+
+  @include breakpoint-mf("md") {
+    padding: 25px;
+  }
+}
+
+.comments__radio-btn-wrap {
+  @include flex(row, flex-start, center);
+  margin-top: 8px;
+  gap: 16px;
+}
+
+//---------SUBMIT BUTTON---------------------
+
+.comments__submit-btn {
+  border-radius: 4px;
+  margin-left: auto;
+  display: block;
+}

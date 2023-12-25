@@ -1,0 +1,42 @@
+.currency {
+   appearance: none;
+   background-color: $secondaryLight;
+   border: none;
+   font-size: 16px;
+   color: $primary;
+   cursor: pointer;
+   position: relative;
+   width: 50px;
+
+   @media(max-width: 768px) {
+      background-color: $white;
+   }
+
+   &:focus {
+      outline: none;
+   }
+
+   &:hover {
+      background-color: $secondaryLight;
+
+   }
+
+   &__img {
+      width: 30px;
+      height: 30px;
+   }
+}
+
+.currency option {
+   width: 50px;
+   text-align: center;
+   background-color: $white;
+   color: $primary;
+   font-weight: 500;
+   font-size: 17px;
+}
+
+.currency__icon {
+   width: 25px;
+   height: 25px;
+}

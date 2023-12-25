@@ -1,0 +1,226 @@
+.top-items {
+  @include flex(row, space-between, flex-start);
+  margin-top: 30px;
+  border-radius: 5px;
+  &__img {
+    position: relative;
+    margin-top: 100px;
+    top: -80px;
+    right: -590px;
+    width: 520px;
+    height: 326px;
+    border-radius: 15px;
+    object-fit: cover;
+    @include breakpoint-bet(1020px, 1199px) {
+      width: 46%;
+      margin-left: -70px;
+    }
+    @include breakpoint-bet(898px, 1019px) {
+      width: 45%;
+      margin-left: -130px;
+    }
+    @include breakpoint-bet(768px, 897px) {
+      width: 40%;
+      margin-left: -180px;
+    }
+    @include breakpoint-bet(620px, 767px) {
+      width: 38%;
+      margin-left: -240px;
+    }
+    @include breakpoint-bet(568px, 619px) {
+      width: 35%;
+      margin-left: -250px;
+    }
+    @include breakpoint-bet(520px, 567px) {
+      width: 30%;
+      margin-left: -260px;
+    }
+    @include breakpoint-bet(480px, 519px) {
+      width: 28%;
+      margin-left: -275px;
+    }
+    @include breakpoint-bet(280px, 479px) {
+      visibility: hidden;
+    }
+  }
+  &__btn {
+    position: absolute;
+    cursor: pointer;
+    border: 1px #211f1c;
+    color: #fff;
+    background-color: #211f1c;
+    font-family: Roboto;
+    margin-left: 70px;
+    top: 300px;
+    width: 169px;
+    height: 52px;
+    font-size: 20px;
+    @include breakpoint-bet(1000px, 1199px) {
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(898px, 999px) {
+      font-size: 18px;
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(768px, 897px) {
+      font-size: 18px;
+      margin-left: 40px;
+    }
+    @include breakpoint-bet(568px, 767px) {
+      font-size: 16px;
+      margin-left: 40px;
+      width: 191px;
+      height: 39px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2509803922);
+    }
+    @include breakpoint-bet(425px, 568px) {
+      width: 255px;
+      height: 26px;
+      margin-left: 30px;
+      font-size: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2509803922);
+    }
+    @include breakpoint-bet(360px, 424px) {
+      width: 240px;
+      height: 26px;
+      margin-left: 25px;
+      font-size: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2509803922);
+    }
+    @include breakpoint-bet(280px, 359px) {
+      width: 200px;
+      height: 26px;
+      margin-left: 25px;
+      font-size: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2509803922);
+    }
+  }
+  &__title {
+    position: absolute;
+    top: 30px;
+    font-family: "Roboto", "sans-serif";
+    font-size: 60px;
+    margin-left: 70px;
+    color: $primary;
+    @include breakpoint-bet(1000px, 1199px) {
+      font-size: 48px;
+      margin-left: 50px;
+      top: 40px;
+    }
+    @include breakpoint-bet(898px, 999px) {
+      font-size: 42px;
+      margin-left: 50px;
+      top: 45px;
+    }
+    @include breakpoint-bet(768px, 897px) {
+      font-size: 40px;
+      margin-left: 40px;
+      margin-top: 50px;
+    }
+    @include breakpoint-bet(568px, 767px) {
+      font-size: 32px;
+      margin-left: 40px;
+      margin-top: 70px;
+    }
+    @include breakpoint-bet(425px, 568px) {
+      font-size: 30px;
+      margin-top: 80px;
+      margin-left: 30px;
+    }
+    @include breakpoint-bet(360px, 424px) {
+      font-size: 30px;
+      margin-top: 90px;
+      margin-left: 25px;
+    }
+    @include breakpoint-bet(280px, 359px) {
+      font-size: 26px;
+      margin-top: 90px;
+      margin-left: 25px;
+    }
+  }
+  &__text {
+    position: absolute;
+    top: 110px;
+    color: #616467;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 70px 0px 0px 70px;
+
+    @include breakpoint-bet(1000px, 1199px) {
+      font-size: 20px;
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(898px, 999px) {
+      font-size: 18px;
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(768px, 897px) {
+      font-size: 18px;
+      margin-left: 40px;
+    }
+    @include breakpoint-bet(568px, 767px) {
+      font-size: 16px;
+      margin-left: 40px;
+    }
+    @include breakpoint-bet(425px, 568px) {
+      font-size: 16px;
+      top: 125px;
+      margin-left: 30px
+    }
+    @include breakpoint-bet(360px, 424px) {
+      font-size: 14px;
+      margin-left: 25px;
+      top: 125px;
+    }
+    @include breakpoint-bet(280px, 359px) {
+      font-size: 12px;
+      margin-left: 25px;
+      top: 125px;
+    }
+  }
+  &__subtext {
+    position: absolute;
+    top: 140px;
+    color: #616467;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 70px 0px 0px 70px;
+    @include breakpoint-bet(1000px, 1199px) {
+      font-size: 20px;
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(898px, 999px) {
+      font-size: 18px;
+      margin-left: 50px;
+    }
+    @include breakpoint-bet(768px, 897px) {
+      font-size: 18px;
+      margin-left: 40px;
+    }
+    @include breakpoint-bet(568px, 767px) {
+      font-size: 16px;
+      margin-left: 40px;
+    }
+    @include breakpoint-bet(425px, 568px) {
+      font-size: 16px;
+      top: 150px;
+      margin-left: 30px;
+    }
+    @include breakpoint-bet(360px, 424px) {
+      font-size: 14px;
+      margin-left: 25px;
+      top: 150px;
+    }
+    @include breakpoint-bet(280px, 359px) {
+      font-size: 12px;
+      margin-left: 25px;
+      top: 150px;
+    }
+  }
+}

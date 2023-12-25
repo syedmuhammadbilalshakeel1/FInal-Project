@@ -1,0 +1,79 @@
+.all-product {
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__card-rows {}
+
+  &__card {
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+
+    @media (min-width: 500px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 58px;
+      grid-row-gap: 0;
+    }
+
+    @media (min-width: 700px) {
+      margin-top: 35px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 890px) {
+      margin-top: 25px;
+      grid-column-gap: 10px;
+    }
+
+    @include breakpoint-mf('xl') {
+      grid-column-gap: 30px;
+      grid-row-gap: 35px;
+      grid-template-columns: repeat(4, 1fr);
+
+    }
+  }
+}
+
+.all-product__card>div {
+  @include flex(column, center, center)
+}
+
+.skeleton-wrapper {
+  width: 100%;
+  height: 100%;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  @include breakpoint-mf('sm') {
+    margin-top: 50px;
+  }
+
+
+  @include breakpoint-mf('md') {
+    gap: 7px;
+    margin-top: 70px;
+    margin-left: 35px;
+  }
+
+
+  @include breakpoint-mf('my') {
+    gap: 45px;
+  }
+
+  @include breakpoint-mf('xl') {
+    margin-top: 45px;
+    gap: 28px;
+  }
+}

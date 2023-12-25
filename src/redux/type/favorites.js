@@ -1,0 +1,12 @@
+const favoritesTypes = {
+         ADD_TO_FAVORITES: "ADD_TO_FAVORITES",
+         UPDATE_FAVORITES: "UPDATE_FAVORITES",
+         REMOVE_FROM_FAVORITES: "REMOVE_FROM_FAVORITES",
+         FILL_FAV: "FILL_FAV",
+         CLEAR_FAV: "CLEAR_FAV",
+         INCREASE_FAV: "INCREASE_FAV",
+         REMOVE_ENTIRE_FAV: "REMOVE_ENTIRE_FAV",
+         UPDATE_FAV_QUANTITY: "UPDATE_FAV_QUANTITY",
+};
+
+export default favoritesTypes;

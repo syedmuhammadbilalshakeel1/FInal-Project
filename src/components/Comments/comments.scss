@@ -1,0 +1,175 @@
+.comments {
+  padding-top: 30px;
+  position: relative;
+  background: $secondaryLight;
+  padding-bottom: 53px;
+
+  @include breakpoint-mf('sm') {
+    padding-top: 40px;
+    padding-bottom: 77px;
+  }
+
+  @include breakpoint-mf('my') {
+    padding-top: 42px;
+    padding-bottom: 140px;
+  }
+}
+
+.comments__title {
+  color: $primaryLight;
+  @include fonts(400, 20px, 30px);
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include breakpoint-mf('sm') {
+    color: $primary;
+    @include fonts(400, 25px, 38px);
+  }
+
+  @include breakpoint-mf('xl') {
+    color: $primaryLight;
+    @include fonts(400, 35px, 50px);
+  }
+}
+
+.comments__quantity {
+  margin-left: 15px;
+  font-size: 14px;
+  color: $primaryLight;
+
+  @include breakpoint-mf('sm') {
+    @include fonts(400, 18px, 30px);
+  }
+}
+
+.comments__list {
+  @include flex(column, flex-start, flex-start);
+  row-gap: 48px;
+  max-height: 1500px;
+  overflow-y: auto;
+  margin-bottom: 70px;
+}
+
+.comments__item {
+  padding: 20px;
+  width: 100%;
+  background: $white;
+  @include fonts(400, 16px, 24px);
+  color: $primary;
+  border-radius: 4px;
+
+  @include breakpoint-mf('sm') {
+    padding: 25px;
+    @include fonts(400, 20px, 30px);
+  }
+}
+
+.comments__no-reviews {
+  margin-bottom: 70px;
+}
+
+.comments__login-message {
+  margin-top: 48px;
+  @include fonts(400, 14px, 21px);
+  color: $primary;
+
+  @include breakpoint-mf("md") {
+    @include fonts(400, 20px, 30px);
+  }
+  @include breakpoint-mf("my") {
+    @include fonts(400, 18px, 27px);
+  }
+
+  &-link {
+    color: $primaryLight;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+}
+
+.comments__add-btn {
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+.comments__label {
+  @include fonts(400, 14px, 21px);
+  color: $primary;
+  width: 150px;
+
+  @include breakpoint-mf('xs') {
+    width: 110px;
+  }
+
+  @include breakpoint-mf('sm') {
+    @include fonts(400, 16px, 22px);
+    width: 130px;
+  }
+
+  @include breakpoint-mf('md') {
+    @include fonts(400, 18px, 30px);
+    width: 150px;
+  }
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  &--required {
+    &::after {
+      content: "*";
+      color: red;
+    }
+  }
+
+  &--small {
+    width: 90px;
+    @include fonts(400, 14px, 21px);
+  }
+
+  &--uppercase {
+    width: fit-content;
+    text-transform: uppercase;
+    @include fonts(500, 16px, 24px);
+
+    @include breakpoint-mf('md') {
+      @include fonts(500, 20px, 30px);
+    }
+  }
+
+  &--green {
+    color: #a2c617;
+  }
+
+  &--red {
+    color: #f84147;
+  }
+
+  &--readonly {
+    display: inline-block;
+    margin-bottom: 5px;
+    @include fonts(500, 16px, 24px);
+
+    @include breakpoint-mf('sm') {
+      @include fonts(500, 20px, 30px);
+    }
+  }
+}
+
+.comments__tradeoffs {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint-mf("ma") {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+  }
+
+  &-item {
+    margin-bottom: 20px;
+  }
+}
